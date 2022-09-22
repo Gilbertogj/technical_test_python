@@ -15,10 +15,11 @@ class OrderSerializer(serializers.ModelSerializer):
     #Method to obtain order status 
 
     def get_status(self, instance):
+        """Returns the order status """
         response = OrderLine.objects.filter(order_id=instance.id)
         
         dict_response= response.values()
-
+        status=""
         for key in dict_response: 
             if (key["status"]) == "PENDING":
                 status = "PENDING"

@@ -48,6 +48,7 @@ THIRD_APPS = [
 LOCAL_APPS = [
     'apps.products',
     'apps.seasons',
+    'apps.weather',
     
 ]
 
