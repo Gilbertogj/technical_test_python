@@ -6,6 +6,7 @@ class Order(models.Model):
     """ Orders Model"""
 
     order_number = models.CharField(max_length=10)
+    status = models.CharField(max_length=10, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
 
